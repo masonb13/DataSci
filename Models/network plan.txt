@@ -1,0 +1,19 @@
+not directional
+unknown structure
+N = 20
+network structure
+outbreak propagation
+
+for loop to create network
+prob P that those two pairs are connected by link
+
+erdos renyi network
+
+seed number of people infected at t = 0
+prob that t + 1 infected by connection
+infection period is 1 time interval
+cannot be infected more than once
+
+git commit network branch
+
+discrete event simulation
