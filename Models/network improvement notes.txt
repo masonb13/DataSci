@@ -1,0 +1,26 @@
+p=.4
+remove()
+old		23.9
+new		17.5
+26.77% improvement
+5.83/rep
+
+start() nothing
+infect() nothing
+set attr nothing
+
+choices = ['s','i']
+    I = []
+    R = []
+    infected = list(dict( (n,d['val']) for n,d in G.nodes().items() if d['val'] == 'i'))
+    for i in range(len(G.nodes)):
+        if G.nodes[i]['val'] == 's':
+            neighbors = list(G.adj[i]) # find all nodes connected to node i with ['val'] == 'i'
+            infectedNeighbors = list(set(neighbors).intersection(set(infected)))
+            p = (1-q**len(infectedNeighbors)) #---------------------------------------------------------------------------
+            choose = random.choices(choices, weights=(1-p, p), k=1)
+            if choose[0] == 'i':
+                I.append(i)
+        elif G.nodes[i]['val'] == 'i':
+            R.append(i)
+    return [I, R]
