@@ -1,0 +1,15 @@
+parameter sweep
+cluster:
+	batch file
+	dependencies in modules
+	
+python pickling
+
+python arg parse gives cmd line args to python file
+.env variables
+
+enough to start writing
+
+Next:
+Write scientific paper "latek"
+Read through some scripts and try to write what I can
