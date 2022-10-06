@@ -7,10 +7,10 @@ SBATCH --time=5:00:00
 SBATCH --ntasks=1
 
 # Give a name to your job to aid in monitoring
-SBATCH --job-name covidForecastinvaccinecombine
+SBATCH --job-name reedFrostNetworkModel
 
 # Write Standard Output and Error
-SBATCH --output="myjobvaccinecombinedata.%j.%N.out"
+SBATCH --output="reedFrost.%j.%N.out"
 cd ${SLURM_SUBMIT_DIR} # cd to directory where you submitted the job
 
 
@@ -19,7 +19,7 @@ cd ${SLURM_SUBMIT_DIR} # cd to directory where you submitted the job
 
 export PYTHONPATH=$PYTHONPATH:$HOME/pythonpkgs
 
-python3 test.py 
+python3 NetworkClusterFily.py ${SIMNUM} ${P} ${Q}
 
 exit
 
