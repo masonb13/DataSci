@@ -1,3 +1,5 @@
+sol.cc.lehigh.edu
+
 parameter sweep
 cluster:
 	batch file

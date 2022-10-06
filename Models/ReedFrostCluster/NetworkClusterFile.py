@@ -69,7 +69,7 @@ def brokenNetworkModel():
 
 
 # Run numRep models
-numRep = 1
+numRep = 2
 name = str(args.SIMNUM) + ".csv"
 Header = ["SimNum", "P", "Q", "time", "I"]
 

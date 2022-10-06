@@ -3,8 +3,8 @@
 SBATCH --partition=health,lts,hawkcpu,infolab,engi,eng
 
 # Request 1 hour of computing time
-SBATCH --time=5:00:00
-SBATCH --ntasks=1
+SBATCH --time=1:00:00
+SBATCH --ntasks=3 --nodes=1
 
 # Give a name to your job to aid in monitoring
 SBATCH --job-name reedFrostNetworkModel
@@ -17,10 +17,8 @@ cd ${SLURM_SUBMIT_DIR} # cd to directory where you submitted the job
 
 
 
-export PYTHONPATH=$PYTHONPATH:$HOME/pythonpkgs
+export PYTHONPATH=$PYTHONPATH:$HOME/pythonPackages
 
-python3 NetworkClusterFily.py ${SIMNUM} ${P} ${Q}
+python3 NetworkClusterFily.py --SIMNUM=${SIMNUM} --P=${P} --Q=${Q}
 
 exit
-
-sbatch clust.bat
