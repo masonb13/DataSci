@@ -57,6 +57,8 @@ def brokenNetworkModel():
 
     #infect numGen intervals of the network
     for i in range(numGen):
+        if(I[-1]==0):
+            break
         output = infect(G,q)
         I.append(len(output[0]))
 
