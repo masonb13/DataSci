@@ -11,7 +11,7 @@
 
 # Write Standard Output and Error
 #SBATCH --output="reedFrost.%j.%N.out"
-cd ${SLURM_SUBMIT_DIR} # cd to directory where you submitted the job
+#cd ${SLURM_SUBMIT_DIR} # cd to directory where you submitted the job
 
 export PYTHONPATH=$PYTHONPATH:$HOME/pythonPackages
 
