@@ -8,7 +8,6 @@ import csv
 
 # Define argparse
 parser = argparse.ArgumentParser()
-parser.add_argument('--SIMNUM',type=int)
 parser.add_argument('--P',type=float)
 parser.add_argument('--Q',type=float)
 args = parser.parse_args()
@@ -72,7 +71,7 @@ def brokenNetworkModel():
 
 # Run numRep models
 numRep = 2
-name = str(args.SIMNUM) + "_" + str(args.P) + "_" + str(args.Q) + ".csv"
+name = str(args.P) + "_" + str(args.Q) + ".csv"
 Header = ["SimNum", "P", "Q", "time", "I"]
 
 f = open(name, 'w')
@@ -81,7 +80,7 @@ writer.writerow(Header)
 
 for i in range(numRep):
     I = brokenNetworkModel()
-    for i in range(len(I)):
-        writer.writerow([args.SIMNUM,args.P, args.Q, i, I[i]])
+    for j in range(len(I)):
+        writer.writerow([i,args.P, args.Q, j, I[j]])
 
 f.close()

@@ -5,13 +5,11 @@ from sympy import Q
 
 f = open("iterations.CSV", 'w')
 writer = csv.writer(f, lineterminator = '\n')
-SIMNUM = np.arrange(0,)
-Q
-P = 
+Q = [.99,.999]
+P = [.1,.2]
 
-for i in range(numRep):
-    I = brokenNetworkModel()
-    for i in range(len(I)):
-        writer.writerow([args.SIMNUM,args.P, args.Q, i, I[i]])
+for q in Q:
+    for p in P:
+        writer.writerow(["--Q={}".format(q)," --P={}".format(p)])
 
 f.close()
