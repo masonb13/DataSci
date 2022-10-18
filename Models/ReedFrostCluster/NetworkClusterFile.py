@@ -72,7 +72,7 @@ def brokenNetworkModel():
 
 # Run numRep models
 numRep = 2
-name = str(args.SIMNUM) + ".csv"
+name = str(args.SIMNUM) + "_" + str(args.P) + "_" + str(args.Q) + ".csv"
 Header = ["SimNum", "P", "Q", "time", "I"]
 
 f = open(name, 'w')
@@ -85,4 +85,3 @@ for i in range(numRep):
         writer.writerow([args.SIMNUM,args.P, args.Q, i, I[i]])
 
 f.close()
-
