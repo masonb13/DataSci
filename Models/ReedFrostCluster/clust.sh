@@ -15,6 +15,6 @@
 
 export PYTHONPATH=$PYTHONPATH:$HOME/pythonPackages
 
-python3 NetworkClusterFile.py --SIMNUM=$SIMNUM --P=$P --Q=$Q
+python3 NetworkClusterFile.py --P=$P --Q=$Q
 
 exit
