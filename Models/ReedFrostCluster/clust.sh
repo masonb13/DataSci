@@ -15,6 +15,6 @@ cd ${SLURM_SUBMIT_DIR} # cd to directory where you submitted the job
 
 export PYTHONPATH=$PYTHONPATH:$HOME/pythonPackages
 
-python3 NetworkClusterFily.py --SIMNUM=${SIMNUM} --P=${P} --Q=${Q}
+python3 NetworkClusterFile.py --SIMNUM=${SIMNUM} --P=${P} --Q=${Q}
 
 exit
