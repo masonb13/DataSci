@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 #--arguments
 SLURM_SCRIPT=$1
