@@ -3,8 +3,8 @@ import numpy as np
 
 f = open("iterations.CSV", 'w')
 writer = csv.writer(f, lineterminator = '\n')
-Q = [.99,.999]
-P = [.1,.2]
+Q = np.linspace(.8,.999,101)
+P = np.linspace(0,.8,101)
 
 for q in Q:
     for p in P:
