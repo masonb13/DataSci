@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --partition=health,lts,hawkcpu,infolab,engi,eng
 #--Request 1 hour of computing time
-#SBATCH --time=72:30:00
+#SBATCH --time=48:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #--Give a name to your job to aid in monitoring
