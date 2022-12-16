@@ -1,10 +1,10 @@
 import csv
 import numpy as np
 
-f = open("iterations.CSV", 'w')
+f = open("1_iterations.CSV", 'w')
 writer = csv.writer(f, lineterminator = '\n')
-Q = np.linspace(.8,.999,101)
-P = np.linspace(0,.8,101)
+Q = np.arange(0.95,1,0.0005)
+P = np.arange(0,1,.01)
 
 for q in Q:
     for p in P:

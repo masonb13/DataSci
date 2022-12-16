@@ -9,5 +9,5 @@
 #--Write Standard Output and Error
 #SBATCH --output="myjob.%j.%N.out"
 cd ${SLURM_SUBMIT_DIR} # cd to directory where you submitted the job
-bash distributor.sh clust.sh iterations.CSV
+bash 1_distributor.sh 1_clust.sh 1_iterations.CSV
 exit
