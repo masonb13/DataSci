@@ -3,11 +3,11 @@ import numpy as np
 
 f = open("2_combination.CSV", 'w')
 writer = csv.writer(f, lineterminator = '\n')
-Q = np.linspace(.8,.999,101)
-P = np.linspace(0,.8,101)
+Q = np.arange(0.95,1,0.0005)
+P = np.arange(0,1,.01)
 for q in Q:
     for p in P:
-        with open("C:\\Users\\Mase\\Desktop\\ReedFrostCluster\\{}_{}.csv".format(p,q)) as h:
+        with open("ReedFrostCluster\Data\ReedFrostCluster\{}_{}.csv".format(p,q)) as h:
             reader = csv.reader(h)
             for line in reader:
                 if line != ["SimNum","P","Q","time","I"]:

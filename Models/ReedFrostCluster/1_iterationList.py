@@ -3,8 +3,8 @@ import numpy as np
 
 f = open("1_iterations.CSV", 'w')
 writer = csv.writer(f, lineterminator = '\n')
-Q = np.arange(0.95,1,0.0005)
-P = np.arange(0,1,.01)
+Q = np.round(np.arange(0.95,1,.0005),decimals=4)
+P = np.round(np.arange(0,1,.01),decimals=2)
 
 for q in Q:
     for p in P:
